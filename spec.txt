@@ -1,0 +1,28 @@
+Az adatokat a /services/pilot-data.service modul biztosítja, ezen a fájlon ne változtass.
+
+robotok: {id, name, flight_hours}
+űrhajók: {id, name}
+pilóták: {robot, spaceship} - egy robot és egy űrhajó azonosítót rendel össze (M:N kapcsolat)
+
+A modul a következő metódusokat exportálja
+    getRobots(callback) - az összes robot adatot visszaadja, paramétere egy error-first callback
+    getSpaceships(callback) - az összes űhajó adatot visszaadja, paramétere egy error-first callback
+    getRobotById(id, callback) - visszaadja az id-val azonosított robot adatot, második paramétere egy error-first callback
+    getSpaceshipById - visszaadja az id-val azonosított űrhajó adatot, második paramétere egy error-first callback
+    getPilots(callback) - visszaadja az összes pilóta adatot
+
+4. /pilots?level=[junior / medior / szenior] (10p)
+   a pilótákat 3 szintre osztjuk: junior / medior / szenior az repült óráik alapján
+   junior: 1000 óra alatt
+   medior: 1000-4999 óra
+   senior: 5000+ óra
+   ha meg van adva, akkor csaka szintnek megfelelőket.
+
+7.  /pilots/[id]
+    Az id paraméterben megadott azonosítóju robot adatait jelenítsd meg ejs template segítségével.
+    A views könyvtár alatt a pilot.html-t alakítsd át templatté. (6p)
+
+8. A /pilot/id oldalon jeleníts meg egy listát a pilótához tartozó űrhajókról (10p)
+
+összesen 50 pont
+
